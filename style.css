@@ -1,0 +1,190 @@
+body {
+  color: #2b1717;
+  background-image: url(https://files.catbox.moe/2swod3.png);
+  background-color: rgb(255, 255, 255);
+}
+a {
+  color: #b16c9c;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #423431;
+}
+pre {
+  color: #8b838a;
+}
+.container {
+  display: grid;
+  grid-template-columns: 0.2fr 1.4fr 0.4fr 0.5fr 1.1fr 0.6fr 0.4fr 0.4fr 0.6fr 0.5fr 0.6fr 0.9fr 0.1fr;
+  grid-template-rows: 0.8fr 2.1fr 0.4fr 3.2fr 1.7fr 1.5fr 2.1fr 1.7fr 0fr;
+  grid-auto-columns: 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-items: stretch;
+  grid-template-areas:
+    ". thing7 thing7 thing7 thing7 thing7 thing7 thing7 thing7 thing7 thing7 thing7 ."
+    ". names  names  names  names  names  names  names  names  names  names  names  ."
+    ". names  names  names  names  names  names  names  names  names  names  names  ."
+    ". thing1 thing1 thing1 thing1 thing2 thing2 thing2 thing2 thing2 thing3 thing3 ."
+    ". thing1 thing1 thing1 thing1 thing2 thing2 thing2 thing2 thing2 thing3 thing3 ."
+    ". thing4 thing4 thing4 thing4 thing4 thing4 thing4 thing4 thing4 thing5 thing5 ."
+    ". thing4 thing4 thing4 thing4 thing4 thing4 thing4 thing4 thing4 thing5 thing5 ."
+    ". thing6 thing6 thing6 thing6 thing6 thing6 thing6 thing6 thing6 thing5 thing5 ."
+    ". . . . . . . . . . . . .";
+  height: 900px;
+  width: 920px;
+  margin-left: -30px;
+}
+
+.names {
+  grid-area: names;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  border-image: url(https://solaria.neocities.org/bits/fadedlace2.png) 20 round;
+  background-color: white;
+  padding: 10px;
+  background-image: url("https://files.catbox.moe/tegqh4.png");
+  background-position: right;
+  background-size: 280px;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+.names > h1 {
+  margin-top: -10px;
+  margin-bottom: -2px;
+  font-size: 28px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.thing1 {
+  grid-area: thing1;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  border-image: url(https://solaria.neocities.org/bits/fadedlace2.png) 20 round;
+  background-color: white;
+  padding: 10px;
+  line-height: 1.26;
+}
+
+.thing2 {
+  grid-area: thing2;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  border-image: url(https://solaria.neocities.org/bits/fadedlace2.png) 20 round;
+  background-color: white;
+  padding: 10px;
+}
+
+.thing3 {
+  grid-area: thing3;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  border-image: url(https://solaria.neocities.org/bits/fadedlace2.png) 20 round;
+  background-color: white;
+  padding: 10px;
+}
+
+.thing4 {
+  grid-area: thing4;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  border-image: url(https://solaria.neocities.org/bits/fadedlace2.png) 20 round;
+  background-color: white;
+  padding: 10px;
+  display: relative;
+}
+
+.thing5 {
+  grid-area: thing5;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  border-image: url(https://solaria.neocities.org/bits/fadedlace2.png) 20 round;
+  background-color: white;
+  padding: 10px;
+}
+
+.thing6 {
+  grid-area: thing6;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  border-image: url(https://solaria.neocities.org/bits/fadedlace2.png) 20 round;
+  background-color: white;
+  padding: 10px;
+}
+
+.thing7 {
+  grid-area: thing7;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  border-image: url(https://solaria.neocities.org/bits/fadedlace2.png) 20 round;
+  background-color: white;
+}
+.thing1 > img {
+  margin-right: 10px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  border-image: url("https://solaria.neocities.org/bits/fadedlace2.png") 20
+    round;
+}
+article {
+  display: flex;
+}
+
+/* This is what causes the actual smooth scrolling */
+@keyframes scroll-l2r {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Change the '10s' in this to change how fast it scrolls! */
+.scroll-l2r {
+  animation: scroll-l2r 10s linear infinite;
+}
+
+/* Right-to-Left */
+@keyframes scroll-r2l {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.scroll-r2l {
+  animation: scroll-r2l 10s linear infinite;
+}
+
+/* 'Display: Flex' is extremely important to use here so all the items inside the marquee line up correctly, and the duplicated container lines up properly with the original */
+.marquee {
+  display:flex;
+
+}
+
+.marquee-items {
+  min-width: 100%;
+  position: relative;
+  display:flex;
+}
+.marquee-items>img {
+  padding-right: 10px;
+
+}
+
+.paused {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
